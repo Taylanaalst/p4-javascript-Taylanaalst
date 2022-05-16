@@ -1,6 +1,10 @@
 let name;
 let country;
-// let p = document.getElementById("output");
+let p = document.getElementById("output");
+
+let nameChanged = document.querySelector("#nameChanged");
+let countryChanged = document.querySelector("#countryChanged")
+
 
 // const nameChanged = function(event){
 //     name = event.target.value;
@@ -12,17 +16,17 @@ let country;
 //     changeInput();
 // }
 
-const changeInput = function(){
-    const text = `Je heet ${name} en je komt uit ${country}`;
-    p.textContent = text;
-}
+// const changeInput = function(){
+//     const text = `Je heet ${name} en je komt uit ${country}`;
+//     p.textContent = text;
+// }
 
-nameChanged.addEventlistener("change", function()){
+nameChanged.addEventListener("change", function(){
     name= event.target.value;
     changeInput();
-}
+})
 
-countryChanged.addEventlistener("change", function(){
+countryChanged.addEventListener("change", function(){
     country = event.target.value;
     changeInput();
 })
